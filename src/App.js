@@ -3,6 +3,7 @@ import './App.css';
 import { getAllProducts } from './dal/api.js';
 import GroceryList from './GroceryList.js';
 import ShoppingCart from './ShoppingCart';
+import Modal from './Modal';
 function App() {
   const [groceryItems, setGroceryItems] = useState(getAllProducts())
   const [shoppingItems, setShoppingItems] = useState([])
@@ -10,7 +11,14 @@ function App() {
   const [amount, setAmount] = useState(0)
   const [modalOpen, setModalOpen] = useState(false)
   function handleOrder() {
-    console.log(shoppingItems)
+    setModalOpen(true)
+  }
+  function reset() {
+    setModalOpen(false)
+    setShoppingItems([])
+    setAmount(0)
+    setTotal(0)
+    setGroceryItems(getAllProducts())
   }
   function handleBuy(id) {
     setGroceryItems(groceryItems.map(groceryItem => {
@@ -49,7 +57,7 @@ function App() {
     <div className="App">
       <GroceryList items={groceryItems} click={handleBuy} />
       <ShoppingCart items={shoppingItems} amount={amount} total={total} order={handleOrder} />
-      {modalOpen ? <Modal /> : ''}
+      {modalOpen ? <Modal items={shoppingItems} close={reset} /> : ''}
     </div>
   );
 }
