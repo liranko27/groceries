@@ -4,8 +4,9 @@ import { getAllProducts } from './dal/api.js';
 import GroceryList from './GroceryList.js';
 import ShoppingCart from './ShoppingCart';
 import Modal from './Modal';
+import products from './data/items.json'
 function App() {
-  const [groceryItems, setGroceryItems] = useState(getAllProducts())
+  const [groceryItems, setGroceryItems] = useState([...getAllProducts()])
   const [shoppingItems, setShoppingItems] = useState([])
   const [total, setTotal] = useState(0)
   const [amount, setAmount] = useState(0)
@@ -14,11 +15,13 @@ function App() {
     setModalOpen(true)
   }
   function reset() {
+    const allProducts = getAllProducts()
+    console.log(allProducts)
+    setGroceryItems(products)
     setModalOpen(false)
     setShoppingItems([])
     setAmount(0)
     setTotal(0)
-    setGroceryItems(getAllProducts())
   }
   function handleBuy(id) {
     setGroceryItems(groceryItems.map(groceryItem => {
@@ -49,7 +52,6 @@ function App() {
     const sorted = data.sort((a, b) => b.unitInStock - a.unitInStock)
     setGroceryItems(sorted)
   }
-  console.log(total, amount)
   useEffect(() => {
     handleSort(groceryItems)
   }, [groceryItems])
