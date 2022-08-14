@@ -4,8 +4,8 @@ function Item({ productName, price, unitInStock, img }) {
     return (
         <li >
             <img src={img} alt={productName} />
-            <p>Price:{price}</p>
-            <p>Amount:{unitInStock}</p>
+            <p>Price:<b>{price}</b></p>
+            <p>Amount:<b>{unitInStock}</b></p>
         </li>
     )
 }
