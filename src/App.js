@@ -3,7 +3,7 @@ import './App.css';
 import { getAllProducts } from './dal/api.js';
 import GroceryList from './GroceryList.js';
 function App() {
-  const [items, setItems] = useState(getAllProducts())
+  const [items, setItems] = useState([])
   useEffect(() => {
     setItems(getAllProducts())
   }, [items])

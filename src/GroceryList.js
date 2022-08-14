@@ -1,4 +1,5 @@
 import React from 'react'
+import Item from './Item'
 
 function GroceryList({ items }) {
     return (
@@ -6,7 +7,7 @@ function GroceryList({ items }) {
             <h1>Grocery List</h1>
             <ul>
                 {items.map(item => {
-                    return <li key={item.id}>{item.productName}</li>
+                    return <Item key={item.id} {...item} />
                 })}
             </ul>
         </>
