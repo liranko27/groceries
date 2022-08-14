@@ -11,7 +11,7 @@ function ShoppingCart({ items, total, amount, order }) {
                     return <Item key={item.id} item={item} />
                 })}
             </ul>
-            <p>Total:{total}</p>
+            <p>Total:{total}$</p>
             <p>Amount:{amount}</p>
             <button onClick={order}>Place Order</button>
         </div>

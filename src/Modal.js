@@ -7,7 +7,7 @@ function Modal({ items, close }) {
         <div className='Modal'>
             <h1>Summery</h1>
             <ul>
-                {items.map(item => <Item item={item} />)}
+                {items.map(item => <Item key={item.id} item={item} />)}
             </ul>
             <button onClick={() => close(false)}>Close</button>
         </div>
