@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "productName": "iPhone",
+        "price": 250,
+        "img": "https://www.ivory.co.il/files/catalog/org/1651054719n19Hu.jpg",
+        "unitInStock": 15
+    },
+    {
+        "id": 2,
+        "productName": "Hp computer",
+        "price": 200,
+        "img": "https://www.ivory.co.il/files/catalog/org/1627376721t21YD.jpg",
+        "unitInStock": 5
+    },
+    {
+        "id": 3,
+        "productName": "Galaxy s22",
+        "price": 150,
+        "img": "https://www.ivory.co.il/files/catalog/org/1651386215d15Lq.jpg",
+        "unitInStock": 7
+    },
+    {
+        "id": 4,
+        "productName": "Samsung screen",
+        "price": 300,
+        "img": "https://www.ivory.co.il/files/catalog/org/1550663499D99Qy.jpg",
+        "unitInStock": 4
+    },
+    {
+        "id": 5,
+        "productName": "Xiaomi Note 11",
+        "price": 125,
+        "img": "https://www.ivory.co.il/files/catalog/org/1651140868v68TD.jpg",
+        "unitInStock": 25
+    },
+    {
+        "id": 6,
+        "productName": "Lenovo all in one",
+        "price": 250,
+        "img": "https://www.ivory.co.il/files/catalog/org/1636298183r83Mh.jpg",
+        "unitInStock": 3
+    },
+    {
+        "id": 7,
+        "productName": "Sandisk 16GB",
+        "price": 8,
+        "img": "https://www.ivory.co.il/files/catalog/org/1595332320D20Im.jpg",
+        "unitInStock": 8
+    }
+]
