@@ -1,18 +1,18 @@
 import React from 'react'
 import Item from './Item'
 
-function GroceryList({ items }) {
+function ShoppingCart({ items }) {
     return (
-        <div className="grocery">
-            <h1>Grocery List</h1>
+        <div className="cart">
+
+            <h1>Shopping Cart</h1>
             <ul>
                 {items.map(item => {
                     return <Item key={item.id} {...item} />
                 })}
             </ul>
-
         </div>
     )
 }
 
-export default GroceryList
+export default ShoppingCart

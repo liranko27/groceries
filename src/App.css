@@ -1,4 +1,14 @@
 ul {
   border: 1px solid black;
   list-style: none;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  cursor: pointer;
 }
