@@ -1,6 +1,4 @@
-import fs from 'fs'
-
+import items from '../data/items.json'
 export function getAllProducts() {
-    const data = JSON.parse(fs.readFileSync('../data/items.json'))
-    return data
+    return items
 }
