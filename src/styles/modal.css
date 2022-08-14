@@ -1,0 +1,14 @@
+body {
+    position: relative;
+}
+
+.Modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -15%);
+    border: 2px solid black;
+    border-radius: 15px;
+}
