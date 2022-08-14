@@ -8,6 +8,10 @@ function App() {
   const [shoppingItems, setShoppingItems] = useState([])
   const [total, setTotal] = useState(0)
   const [amount, setAmount] = useState(0)
+  const [modalOpen, setModalOpen] = useState(false)
+  function handleOrder() {
+    console.log(shoppingItems)
+  }
   function handleBuy(id) {
     setGroceryItems(groceryItems.map(groceryItem => {
       if (groceryItem.id === id) {
@@ -44,7 +48,8 @@ function App() {
   return (
     <div className="App">
       <GroceryList items={groceryItems} click={handleBuy} />
-      <ShoppingCart items={shoppingItems} amount={amount} total={total} />
+      <ShoppingCart items={shoppingItems} amount={amount} total={total} order={handleOrder} />
+      {modalOpen ? <Modal /> : ''}
     </div>
   );
 }
