@@ -1,11 +1,11 @@
 import React from 'react'
 import './styles/item.css'
-function Item({ productName, price, unitInStock, img }) {
+function Item({ item, click }) {
     return (
-        <li >
-            <img src={img} alt={productName} />
-            <p>Price:<b>{price}</b></p>
-            <p>Amount:<b>{unitInStock}</b></p>
+        <li onClick={click ? () => click(item.id) : null}>
+            <img src={item.img} alt={item.productName} />
+            <p>Price:<b>{item.price}</b></p>
+            <p>Amount:<b>{item.unitInStock}</b></p>
         </li>
     )
 }
