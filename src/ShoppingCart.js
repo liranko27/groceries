@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from './Item'
 
-function ShoppingCart({ items, total, amount }) {
+function ShoppingCart({ items, total, amount, order }) {
     return (
         <div className="cart">
 
@@ -13,6 +13,7 @@ function ShoppingCart({ items, total, amount }) {
             </ul>
             <p>Total:{total}</p>
             <p>Amount:{amount}</p>
+            <button onClick={order}>Place Order</button>
         </div>
     )
 }
