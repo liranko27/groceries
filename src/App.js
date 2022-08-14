@@ -4,20 +4,17 @@ import { getAllProducts } from './dal/api.js';
 import GroceryList from './GroceryList.js';
 import ShoppingCart from './ShoppingCart';
 import Modal from './Modal';
-import products from './data/items.json'
 function App() {
   const [groceryItems, setGroceryItems] = useState([...getAllProducts()])
   const [shoppingItems, setShoppingItems] = useState([])
   const [total, setTotal] = useState(0)
   const [amount, setAmount] = useState(0)
   const [modalOpen, setModalOpen] = useState(false)
+
   function handleOrder() {
     setModalOpen(true)
   }
   function reset() {
-    const allProducts = getAllProducts()
-    console.log(allProducts)
-    setGroceryItems(products)
     setModalOpen(false)
     setShoppingItems([])
     setAmount(0)
@@ -59,7 +56,7 @@ function App() {
     <div className="App">
       <GroceryList items={groceryItems} click={handleBuy} />
       <ShoppingCart items={shoppingItems} amount={amount} total={total} order={handleOrder} />
-      {modalOpen ? <Modal items={shoppingItems} close={reset} /> : ''}
+      {modalOpen ? <Modal items={shoppingItems} amount={amount} total={total} close={reset} /> : ''}
     </div>
   );
 }
